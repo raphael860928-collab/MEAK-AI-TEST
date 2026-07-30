@@ -1,207 +1,22 @@
-<!DOCTYPE html>
-<html lang="ko" class="dark">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MEAK AI - 지능형 기술 지식 포털</title>
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- FontAwesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" rel="stylesheet">
-  
-  <style>
-    /* 기본 배경 및 폰트 강제 설정 */
-    html, body {
-      background-color: #030712 !important;
-      color: #f8fafc !important;
-      font-family: 'Plus Jakarta Sans', 'Noto Sans KR', sans-serif;
-      overflow-x: hidden;
-    }
-
-    /* 오로라 백그라운드 효과 */
-    .aurora-bg {
-      background-image: 
-        radial-gradient(at 50% 0%, rgba(99, 102, 241, 0.22) 0px, transparent 65%),
-        radial-gradient(at 100% 20%, rgba(168, 85, 247, 0.15) 0px, transparent 50%),
-        radial-gradient(at 0% 50%, rgba(59, 130, 246, 0.15) 0px, transparent 50%);
-    }
-
-    /* 글자 가독성을 높여주는 그림자 */
-    .text-drop-shadow {
-      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
-    }
-
-    /* 다크 글래스 카드 커스텀 */
-    .modern-card {
-      background: rgba(15, 23, 42, 0.75);
-      backdrop-filter: blur(24px);
-      -webkit-backdrop-filter: blur(24px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.6);
-    }
-
-    .modern-card:hover {
-      border-color: rgba(129, 140, 248, 0.4);
-      box-shadow: 0 25px 50px -12px rgba(99, 102, 241, 0.25);
-    }
-
-    /* 네온 텍스트 그라데이션 */
-    .gradient-title {
-      background: linear-gradient(135deg, #ffffff 0%, #c7d2fe 40%, #a855f7 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-  </style>
-</head>
-<body class="min-h-screen flex flex-col justify-between aurora-bg antialiased">
-
-  <!-- Header -->
-  <header class="w-full max-w-7xl mx-auto px-6 py-8 flex justify-between items-center z-10">
-    <div class="flex items-center space-x-3.5">
-      <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center text-white font-black text-2xl shadow-lg shadow-indigo-500/30">
-        M
-      </div>
-      <span class="text-2xl font-black tracking-tight text-white">MEAK <span class="text-indigo-400">AI</span></span>
-    </div>
-    
-    <div>
-      <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900/90 border border-slate-700/80 text-xs font-bold text-slate-200 shadow-inner">
-        <span class="relative flex h-2 w-2">
-          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
-          <span class="relative inline-flex rounded-full h-2 w-2 bg-amber-400"></span>
-        </span>
-        Powered by NotebookLM
-      </span>
-    </div>
-  </header>
-
-  <!-- Main Content Area -->
-  <main class="w-full max-w-5xl mx-auto px-6 py-8 flex-grow flex flex-col justify-center items-center text-center z-10">
-    
-    <!-- Status Badge -->
-    <div class="inline-flex items-center space-x-2.5 px-4 py-2 rounded-full bg-indigo-950/60 border border-indigo-500/30 mb-8 text-sm font-semibold text-indigo-200 shadow-sm backdrop-blur-md">
-      <i class="fa-solid fa-circle-check text-emerald-400"></i>
-      <span>FA 기술 지원 지식베이스 활성화됨</span>
-    </div>
-
-    <!-- Main Heading -->
-    <h1 class="text-4xl sm:text-5xl md:text-6xl font-black leading-tight tracking-tight mb-6 text-drop-shadow">
-      지식을 대화로 탐색하는<br>
-      <span class="gradient-title">MEAK AI 어시스턴트</span>
-    </h1>
-
-    <!-- Subtitle -->
-    <p class="text-base sm:text-lg md:text-xl text-slate-200 max-w-3xl mb-12 leading-relaxed font-medium text-drop-shadow">
-      검증된 매뉴얼 및 기술 문서 기반으로 정확하고 신뢰할 수 있는 답변을 제공합니다.<br class="hidden md:inline">
-      원하시는 AI 어시스턴트를 선택하여 대화를 시작해 보세요.
-    </p>
-
-    <!-- Cards Grid (SERVO & INVERTER) -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-4xl mb-14">
-      
-      <!-- SERVO AI CARD -->
-      <div class="modern-card rounded-3xl p-8 flex flex-col justify-between text-left transition-all duration-300 hover:-translate-y-1">
-        <div>
-          <div class="w-14 h-14 rounded-2xl bg-indigo-600/20 border border-indigo-500/30 flex items-center justify-center text-indigo-400 mb-6 text-2xl shadow-inner">
-            <i class="fa-solid fa-microchip"></i>
-          </div>
-          <h2 class="text-2xl font-bold text-white mb-3 flex items-center justify-between">
-            SERVO AI
-            <span class="text-xs font-bold px-2.5 py-1 rounded-md bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">서보 매뉴얼</span>
-          </h2>
-          <p class="text-slate-300 text-base leading-relaxed mb-8 font-normal">
-            서보 앰프 및 모터 관련 제어 매뉴얼, 알람/경고 조치 방법, 파라미터 설정을 실시간으로 검색합니다.
-          </p>
-        </div>
-
-        <div>
-          <a id="servo-link" href="#" target="_blank" rel="noopener noreferrer"
-             class="w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-500 hover:to-blue-500 text-white font-bold text-lg shadow-lg shadow-indigo-600/30 flex items-center justify-center space-x-3 transition-all duration-200 active:scale-95">
-            <span>SERVO AI 실행하기</span>
-            <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
-          </a>
-          <p class="text-xs text-slate-400 mt-3 text-center font-normal">
-            * 서보 매뉴얼 전용 NotebookLM 인터페이스가 열립니다.
-          </p>
-        </div>
-      </div>
-
-      <!-- INVERTER AI CARD -->
-      <div class="modern-card rounded-3xl p-8 flex flex-col justify-between text-left transition-all duration-300 hover:-translate-y-1">
-        <div>
-          <div class="w-14 h-14 rounded-2xl bg-purple-600/20 border border-purple-500/30 flex items-center justify-center text-purple-400 mb-6 text-2xl shadow-inner">
-            <i class="fa-solid fa-bolt"></i>
-          </div>
-          <h2 class="text-2xl font-bold text-white mb-3 flex items-center justify-between">
-            INVERTER AI
-            <span class="text-xs font-bold px-2.5 py-1 rounded-md bg-purple-500/20 text-purple-300 border border-purple-500/30">인버터 매뉴얼</span>
-          </h2>
-          <p class="text-slate-300 text-base leading-relaxed mb-8 font-normal">
-            인버터 시리즈 기술 매뉴얼, 에러 코드 트러블슈팅 및 구동 파라미터 기술 지원을 제공합니다.
-          </p>
-        </div>
-
-        <div>
-          <a id="inverter-link" href="#" target="_blank" rel="noopener noreferrer"
-             class="w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-bold text-lg shadow-lg shadow-purple-600/30 flex items-center justify-center space-x-3 transition-all duration-200 active:scale-95">
-            <span>INVERTER AI 실행하기</span>
-            <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
-          </a>
-          <p class="text-xs text-slate-400 mt-3 text-center font-normal">
-            * 인버터 매뉴얼 전용 NotebookLM 인터페이스가 열립니다.
-          </p>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Features Section -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-4xl text-left">
-      <div class="modern-card p-6 rounded-2xl flex items-start space-x-4">
-        <div class="p-3 rounded-xl bg-indigo-500/10 text-indigo-400 text-xl mt-1">
-          <i class="fa-solid fa-quote-left"></i>
-        </div>
-        <div>
-          <h3 class="text-lg font-bold text-white mb-1">출처 기반 정확한 답변</h3>
-          <p class="text-slate-300 text-sm leading-relaxed font-normal">공식 기술 매뉴얼을 직접 인용하여 알람 코드 및 조치법에 대한 명확한 근거를 제시합니다.</p>
-        </div>
-      </div>
-
-      <div class="modern-card p-6 rounded-2xl flex items-start space-x-4">
-        <div class="p-3 rounded-xl bg-purple-500/10 text-purple-400 text-xl mt-1">
-          <i class="fa-solid fa-bolt-lightning"></i>
-        </div>
-        <div>
-          <h3 class="text-lg font-bold text-white mb-1">실시간 핵심 요약</h3>
-          <p class="text-slate-300 text-sm leading-relaxed font-normal">방대한 매뉴얼 문서 속에서 필요한 파라미터와 설정법을 빠른 시간 내에 요약합니다.</p>
-        </div>
-      </div>
-    </div>
-
-  </main>
-
-  <!-- Footer -->
-  <footer class="w-full max-w-7xl mx-auto px-6 py-8 border-t border-slate-800/80 flex flex-col md:flex-row justify-between items-center text-sm text-slate-400 gap-4 z-10">
-    <p>© 2026 MEAK AI. All rights reserved.</p>
-    <p class="text-xs text-slate-500">Optimized for FA Technical Support & Automation Systems</p>
-  </footer>
-
-  <!-- Link Settings Script -->
-  <script>
-    const SERVO_NOTEBOOK_URL = "https://notebooklm.google.com/notebook/a498f300-cefa-4e83-9aab-60996a88d8af/preview";
-    const INVERTER_NOTEBOOK_URL = "https://notebooklm.google.com/notebook/52bf4ae8-4ff1-422c-b88d-b18070393715/preview";
-
-    document.addEventListener("DOMContentLoaded", function() {
-      const servoLink = document.getElementById("servo-link");
-      const inverterLink = document.getElementById("inverter-link");
-
-      if (servoLink) servoLink.href = SERVO_NOTEBOOK_URL;
-      if (inverterLink) inverterLink.href = INVERTER_NOTEBOOK_URL;
-    });
-  </script>
-</body>
-</html>
+<!doctype html><html lang='ko'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>
+<title>MEAK AI V2</title>
+<script src='https://cdn.tailwindcss.com'></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard/dist/web/variable/pretendardvariable.css">
+<style>
+body{font-family:'Pretendard Variable',sans-serif;background:#f8fafc;background-image:radial-gradient(circle at 50% 0,#dbeafe,transparent 45%),radial-gradient(circle at 100% 20%,#ede9fe,transparent 30%)}
+.glass{background:rgba(255,255,255,.8);backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.7);box-shadow:0 20px 50px rgba(15,23,42,.08)}
+.card{transition:.35s}.card:hover{transform:translateY(-10px) scale(1.01);box-shadow:0 30px 60px rgba(79,70,229,.18)}
+.fade{opacity:0;transform:translateY(25px);transition:.8s}.fade.show{opacity:1;transform:none}
+</style></head><body>
+<div class='max-w-7xl mx-auto p-8'>
+<header class='flex justify-between items-center'><div class='flex items-center gap-3'><div class='w-12 h-12 rounded-2xl bg-indigo-600 text-white flex items-center justify-center font-bold'>M</div><div><h1 class='font-black text-2xl'>MEAK <span class='text-indigo-600'>AI</span></h1><p class='text-xs text-slate-500'>Technical Intelligence Portal</p></div></div><span class='glass rounded-full px-4 py-2 text-sm'>Verified Knowledge Base</span></header>
+<section class='text-center py-24 fade'><div class='inline-block rounded-full bg-indigo-100 px-4 py-2 text-indigo-700 font-semibold'>AI Technical Assistant</div><h2 class='text-6xl font-black mt-8'>FA 기술 지원,<br>AI가 더 빠르게 답합니다.</h2><p class='max-w-3xl mx-auto mt-6 text-xl text-slate-600'>공식 기술 문서를 기반으로 신뢰할 수 있는 답변과 정확한 근거를 제공합니다.</p></section>
+<div class='grid md:grid-cols-2 gap-8'>
+<div class='glass card rounded-3xl p-8 fade'><h3 class='text-3xl font-bold'>Servo AI Assistant</h3><p class='mt-4 text-slate-600'>Servo · Motion · Alarm · Parameter</p><ul class='mt-6 space-y-2 text-slate-500'><li>✓ Alarm Analysis</li><li>✓ Parameter Search</li><li>✓ Wiring Guide</li><li>✓ Motion Control</li></ul><a id='s' class='block mt-8 bg-indigo-600 hover:bg-indigo-700 rounded-2xl py-4 text-center text-white font-bold'>SERVO AI 실행하기</a></div>
+<div class='glass card rounded-3xl p-8 fade'><h3 class='text-3xl font-bold'>Inverter AI Assistant</h3><p class='mt-4 text-slate-600'>FR Series · Fault · Drive · Parameter</p><ul class='mt-6 space-y-2 text-slate-500'><li>✓ Fault Diagnosis</li><li>✓ Parameter</li><li>✓ Startup Guide</li><li>✓ Troubleshooting</li></ul><a id='i' class='block mt-8 bg-violet-600 hover:bg-violet-700 rounded-2xl py-4 text-center text-white font-bold'>INVERTER AI 실행하기</a></div></div>
+<footer class='mt-24 border-t pt-8 flex justify-between text-sm text-slate-500'><span>©2026 MEAK AI</span><span>Powered by Google NotebookLM</span></footer></div>
+<script>
+s.href='https://notebooklm.google.com/notebook/a498f300-cefa-4e83-9aab-60996a88d8af/preview';
+i.href='https://notebooklm.google.com/notebook/52bf4ae8-4ff1-422c-b88d-b18070393715/preview';
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}));document.querySelectorAll('.fade').forEach(x=>io.observe(x));
+</script></body></html>
