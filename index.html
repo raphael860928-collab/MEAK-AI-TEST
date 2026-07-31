@@ -1,6 +1,16 @@
 <!doctype html>
 <html lang='ko'>
 <head>
+  <!-- Google tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5LGVERPXDC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-5LGVERPXDC');
+  </script>
+
   <meta charset='utf-8'>
   <meta name='viewport' content='width=device-width,initial-scale=1'>
   <title>MEAK AI V2</title>
@@ -107,7 +117,7 @@
         <a id='btn_q' target='_blank' class='block mt-8 bg-emerald-600 hover:bg-emerald-700 rounded-2xl py-3.5 text-center text-white text-sm font-bold transition-colors'>QPLC AI 실행하기</a>
       </div>
 
-      <!-- 4. iQ-R PLC Card (새로 추가됨) -->
+      <!-- 4. iQ-R PLC Card -->
       <div class='glass card rounded-3xl p-6 fade flex flex-col justify-between'>
         <div>
           <div class='w-10 h-10 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center font-bold mb-4'>R</div>
@@ -133,7 +143,7 @@
 
   <script>
     // =========================================================================
-    // 🔗 NotebookLM 연결 주소 설정 (아래 따옴표 안에 해당 주소를 넣어주세요!)
+    // 🔗 NotebookLM 연결 주소 설정
     // =========================================================================
     const urls = {
       // 1. Servo AI NotebookLM 주소
@@ -145,7 +155,7 @@
       // 3. QPLC AI NotebookLM 주소
       q: 'https://notebooklm.google.com/notebook/41f476e8-7b20-4913-b4e0-e1bd26912a3a/preview',
 
-      // 4. iQ-R PLC AI NotebookLM 주소 (여기에 iQ-R 주소를 넣으시면 됩니다)
+      // 4. iQ-R PLC AI NotebookLM 주소
       r: 'https://notebooklm.google.com/notebook/YOUR_IQR_NOTEBOOK_URL_HERE/preview'
     };
     // =========================================================================
