@@ -47,7 +47,7 @@
   </style>
 </head>
 <body>
-  <div class='max-w-7xl mx-auto p-8'>
+  <div class='max-w-[1440px] mx-auto p-8'>
     <!-- Header -->
     <header class='flex justify-between items-center'>
       <div class='flex items-center gap-3'>
@@ -67,8 +67,8 @@
       <p class='max-w-3xl mx-auto mt-6 text-lg text-slate-600'>공식 기술 문서를 기반으로 신뢰할 수 있는 답변과 정확한 근거를 제공합니다.</p>
     </section>
 
-    <!-- AI Cards (4열 Layout) -->
-    <div class='grid lg:grid-cols-4 md:grid-cols-2 gap-6'>
+    <!-- AI Cards (5열 반응형 Layout) -->
+    <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6'>
       <!-- 1. Servo Card -->
       <div class='glass card rounded-3xl p-6 fade flex flex-col justify-between'>
         <div>
@@ -132,6 +132,22 @@
         </div>
         <a id='btn_r' target='_blank' class='block mt-8 bg-sky-600 hover:bg-sky-700 rounded-2xl py-3.5 text-center text-white text-sm font-bold transition-colors'>iQ-R AI 실행하기</a>
       </div>
+
+      <!-- 5. iQ-F PLC Card (새로 추가된 부분) -->
+      <div class='glass card rounded-3xl p-6 fade flex flex-col justify-between'>
+        <div>
+          <div class='w-10 h-10 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center font-bold mb-4'>F</div>
+          <h3 class='text-xl font-bold text-slate-800'>iQ-F AI Assistant</h3>
+          <p class='mt-2 text-xs text-slate-600'>iQ-F Series · FX5U · Compact · Built-in</p>
+          <ul class='mt-6 space-y-2.5 text-xs text-slate-500'>
+            <li>✓ FX5U / Compact PLC Diagnostics</li>
+            <li>✓ Built-in Analog & Positioning</li>
+            <li>✓ Simple Motion & Ethernet Setup</li>
+            <li>✓ Expansion Module Guide</li>
+          </ul>
+        </div>
+        <a id='btn_f' target='_blank' class='block mt-8 bg-amber-600 hover:bg-amber-700 rounded-2xl py-3.5 text-center text-white text-sm font-bold transition-colors'>iQ-F AI 실행하기</a>
+      </div>
     </div>
 
     <!-- Footer -->
@@ -156,7 +172,10 @@
       q: 'https://notebooklm.google.com/notebook/41f476e8-7b20-4913-b4e0-e1bd26912a3a/preview',
 
       // 4. iQ-R PLC AI NotebookLM 주소
-      r: 'https://notebooklm.google.com/notebook/e0bf73c2-2eb8-4654-b943-385c7b46b590/preview'
+      r: 'https://notebooklm.google.com/notebook/e0bf73c2-2eb8-4654-b943-385c7b46b590/preview',
+
+      // 5. iQ-F PLC AI NotebookLM 주소 (실제 URL로 교체하여 사용하세요)
+      f: 'https://notebooklm.google.com/notebook/2cdcd6cd-1d23-4183-8523-beb60611e573/preview'
     };
     // =========================================================================
 
@@ -165,6 +184,7 @@
     document.getElementById('btn_i').href = urls.i;
     document.getElementById('btn_q').href = urls.q;
     document.getElementById('btn_r').href = urls.r;
+    document.getElementById('btn_f').href = urls.f;
 
     // Scroll Fade In Animation
     const io = new IntersectionObserver(entries => {
