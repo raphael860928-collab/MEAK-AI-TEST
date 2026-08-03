@@ -47,7 +47,7 @@
   </style>
 </head>
 <body>
-  <div class='max-w-[1440px] mx-auto p-8'>
+  <div class='max-w-[1600px] mx-auto p-8'>
     <!-- Header -->
     <header class='flex justify-between items-center'>
       <div class='flex items-center gap-3'>
@@ -67,8 +67,8 @@
       <p class='max-w-3xl mx-auto mt-6 text-lg text-slate-600'>공식 기술 문서를 기반으로 신뢰할 수 있는 답변과 정확한 근거를 제공합니다.</p>
     </section>
 
-    <!-- AI Cards (5열 반응형 Layout) -->
-    <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6'>
+    <!-- AI Cards (6열 반응형 Layout) -->
+    <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6'>
       <!-- 1. Servo Card -->
       <div class='glass card rounded-3xl p-6 fade flex flex-col justify-between'>
         <div>
@@ -133,7 +133,7 @@
         <a id='btn_r' target='_blank' class='block mt-8 bg-sky-600 hover:bg-sky-700 rounded-2xl py-3.5 text-center text-white text-sm font-bold transition-colors'>iQ-R AI 실행하기</a>
       </div>
 
-      <!-- 5. iQ-F PLC Card (새로 추가된 부분) -->
+      <!-- 5. iQ-F PLC Card -->
       <div class='glass card rounded-3xl p-6 fade flex flex-col justify-between'>
         <div>
           <div class='w-10 h-10 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center font-bold mb-4'>F</div>
@@ -147,6 +147,22 @@
           </ul>
         </div>
         <a id='btn_f' target='_blank' class='block mt-8 bg-amber-600 hover:bg-amber-700 rounded-2xl py-3.5 text-center text-white text-sm font-bold transition-colors'>iQ-F AI 실행하기</a>
+      </div>
+
+      <!-- 6. FX3 PLC Card (새로 추가된 부분) -->
+      <div class='glass card rounded-3xl p-6 fade flex flex-col justify-between'>
+        <div>
+          <div class='w-10 h-10 rounded-xl bg-orange-100 text-orange-600 flex items-center justify-center font-bold mb-4'>FX3</div>
+          <h3 class='text-xl font-bold text-slate-800'>FX3 AI Assistant</h3>
+          <p class='mt-2 text-xs text-slate-600'>FX3 Series · FX3U/G/S · Legacy · Micro</p>
+          <ul class='mt-6 space-y-2.5 text-xs text-slate-500'>
+            <li>✓ FX3U / FX3G / FX3S Diagnostics</li>
+            <li>✓ Special Block & Board Config</li>
+            <li>✓ High-Speed Counter & Pulse Output</li>
+            <li>✓ Communication Adapter Guide</li>
+          </ul>
+        </div>
+        <a id='btn_fx3' target='_blank' class='block mt-8 bg-orange-600 hover:bg-orange-700 rounded-2xl py-3.5 text-center text-white text-sm font-bold transition-colors'>FX3 AI 실행하기</a>
       </div>
     </div>
 
@@ -174,8 +190,11 @@
       // 4. iQ-R PLC AI NotebookLM 주소
       r: 'https://notebooklm.google.com/notebook/e0bf73c2-2eb8-4654-b943-385c7b46b590/preview',
 
-      // 5. iQ-F PLC AI NotebookLM 주소 (실제 URL로 교체하여 사용하세요)
-      f: 'https://notebooklm.google.com/notebook/2cdcd6cd-1d23-4183-8523-beb60611e573/preview'
+      // 5. iQ-F PLC AI NotebookLM 주소
+      f: 'https://notebooklm.google.com/notebook/2cdcd6cd-1d23-4183-8523-beb60611e573/preview',
+
+      // 6. FX3 PLC AI NotebookLM 주소 (실제 URL로 교체하여 사용하세요)
+      fx3: 'https://notebooklm.google.com/notebook/e8f1da9a-4df6-4827-9fa9-8c623b8038ac/preview'
     };
     // =========================================================================
 
@@ -185,6 +204,7 @@
     document.getElementById('btn_q').href = urls.q;
     document.getElementById('btn_r').href = urls.r;
     document.getElementById('btn_f').href = urls.f;
+    document.getElementById('btn_fx3').href = urls.fx3;
 
     // Scroll Fade In Animation
     const io = new IntersectionObserver(entries => {
